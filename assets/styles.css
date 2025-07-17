@@ -1,0 +1,952 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+
+/* ========== HEADER ========== */
+/* Estilos base del header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #6a5acd; /* Morado suave */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Título */
+.title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Menú */
+.lista-nav {
+  flex-basis: 100%;
+  display: none;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items li {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.nav-items a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Icono hamburguesa */
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  display: block;
+}
+
+/* Ocultar checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Mostrar menú al marcar el checkbox */
+.menu-toggle:checked ~ .lista-nav {
+  display: block;
+}
+
+/* Responsive para pantallas grandes */
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .lista-nav {
+    display: block !important;
+    flex-basis: auto;
+  }
+
+  .nav-items {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .nav-items li {
+    margin: 0;
+  }
+}
+
+/* ESTILOS DE FOOTER */
+.footer {
+  background-color: #4b0082; /* morado oscuro elegante */
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  font-size: 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.3rem;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #777;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 1rem;
+  }
+}
+
+/* ESTILOS DE HOME */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Sección Intro */
+.intro {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  color: #6a1b9a;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #444;
+}
+
+/* Sección Abuelitos */
+.abuelitos {
+  background-color: #e8eaf6;
+  padding: 4rem 2rem;
+}
+
+.abuelitos h2 {
+  font-size: 2.2rem;
+  color: #283593;
+}
+
+.abuelitos p,
+.abuelitos ul {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.abuelitos ul {
+  margin-top: 1rem;
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.abuelitos button {
+  margin-top: 2rem;
+  background-color: #283593;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sección Voluntarios */
+.voluntarios {
+  background-color: #ede7f6;
+  padding: 4rem 2rem;
+}
+
+.voluntarios h2 {
+  font-size: 2.2rem;
+  color: #4a148c;
+}
+
+.voluntarios ul {
+  margin-top: 1rem;
+  list-style-type: disc;
+  padding-left: 2rem;
+  color: #444;
+}
+
+.voluntarios button {
+  margin-top: 2rem;
+  background-color: #4a148c;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sección Testimonios */
+.testimonios {
+  background-color: #f3f3f3;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonios h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.testimonios blockquote {
+  font-style: italic;
+  background: white;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-left: 5px solid #6a1b9a;
+  max-width: 700px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonios span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* Botones al pasar el mouse */
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+/* Tablets (entre 768px y 1024px) */
+@media screen and (max-width: 1024px) {
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .abuelitos h2,
+  .voluntarios h2 {
+    font-size: 1.8rem;
+  }
+
+  .abuelitos p,
+  .voluntarios ul,
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .testimonios blockquote {
+    padding: 1rem;
+  }
+}
+
+/* Celulares (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p,
+  .abuelitos p,
+  .voluntarios ul {
+    font-size: 0.95rem;
+  }
+
+  .abuelitos h2,
+  .voluntarios h2,
+  .testimonios h2 {
+    font-size: 1.5rem;
+  }
+
+  .abuelitos,
+  .voluntarios,
+  .intro,
+  .testimonios {
+    padding: 2rem 1rem;
+  }
+
+  .testimonios blockquote {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+}
+
+/* === ESTILOS GENERALES PARA LA VISTA DE LOGIN === */
+
+/* Contenedor principal de la vista de login */
+.login-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f4f8; /* Fondo claro y suave */
+  padding: 2rem;
+}
+
+/* Caja que contiene el formulario */
+.login-container {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título del login */
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Campos de texto */
+.login-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Botón de iniciar sesión */
+.login-button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #4b0082; /* Verde oscuro */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #1b5e20;
+}
+
+/* Texto debajo del botón */
+.login-register-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Enlace de registro */
+.login-register-link {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-register-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .login-input,
+  .login-button {
+    font-size: 1rem;
+  }
+}
+
+/* abuelito register */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.volver-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.volver-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 20px;
+    padding: 1rem;
+  }
+
+  form h2 {
+    font-size: 1.4rem;
+  }
+
+  form input,
+  button[type="submit"] {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   Estilos generales para la vista del abuelo
+   ========================================== */
+.abuelo-profile {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2; /* Fondo suave */
+  min-height: 100vh; /* Vista completa en altura */
+}
+
+/* ==========================================
+   Tarjeta principal que contiene todo
+   ========================================== */
+.abuelo-card {
+  background-color: #ffffff; /* Fondo blanco para contraste */
+  border-radius: 12px; /* Bordes redondeados para suavidad */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ==========================================
+   Imagen del perfil en forma de avatar redondo
+   ========================================== */
+.abuelo-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Círculo perfecto */
+  object-fit: cover; /* Evita distorsión */
+  border: 4px solid #d9e4f5; /* Borde azul claro decorativo */
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   Información del abuelo centrada
+   ========================================== */
+.abuelo-info {
+  text-align: center;
+  color: #333333; /* Color oscuro para buen contraste */
+}
+
+.abuelo-nombre {
+  font-size: 1.8rem;
+  color: #004080; /* Azul oscuro institucional */
+  margin-bottom: 1rem;
+}
+
+.abuelo-info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.abuelo-info strong {
+  color: #555555; /* Gris medio para diferenciar etiquetas */
+}
+
+/* ==========================================
+   Estilo para el botón inferior
+   ========================================== */
+.abuelo-boton {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.abuelo-boton button {
+  background-color: #004080; /* Azul institucional */
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.abuelo-boton button:hover {
+  background-color: #003060; /* Más oscuro al pasar el mouse */
+}
+.boton-enlace {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* ==========================================
+   Responsividad para pantallas pequeñas
+   ========================================== */
+@media (max-width: 480px) {
+  .abuelo-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .abuelo-avatar img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .abuelo-nombre {
+    font-size: 1.5rem;
+  }
+
+  .abuelo-info p {
+    font-size: 0.95rem;
+  }
+
+  .abuelo-boton button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================
+   Responsividad para tablets medianas
+   ========================================== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .abuelo-card {
+    max-width: 80%;
+  }
+}
+
+/* ============================================================
+   Estilos para la vista "Crear Cita"
+   Archivo: create-date.css
+   Descripción: Estilos responsivos y accesibles para el formulario
+   ============================================================ */
+
+/* Estilos generales del contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tarjeta visual con sombra y bordes redondeados */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Encabezado de la tarjeta con fondo azul */
+.card-header {
+  background-color: #0d6efd; /* Bootstrap Primary */
+  color: white;
+  padding: 1rem;
+}
+
+/* Cuerpo del formulario */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Estilos para cada campo del formulario */
+form .mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Inputs y textarea uniformes */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+/* Enfocar campos */
+input:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #198754; /* Bootstrap success */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+/* =======================
+   Diseño Responsivo
+   ======================= */
+
+/* Para tablets */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+  .card-header h2 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* styles/dates.css */
+.dates-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dates-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.date-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #5a5a5a;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.date-card:hover {
+  transform: translateY(-5px);
+}
+
+.date-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.date-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.estado {
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+/* Colores por estado */
+.estado.pendiente {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.estado.confirmada {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.estado.cancelada {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+/* Estilos generales para la tarjeta del voluntario */
+.voluntario-profile {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.voluntario-card {
+  background-color: #f2f2f2;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.voluntario-card:hover {
+  transform: scale(1.01);
+}
+
+/* Imagen del voluntario */
+.voluntario-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Información */
+.voluntario-info h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.voluntario-info p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.voluntario-info strong {
+  color: #000;
+}
+
+/* Botón */
+.voluntario-boton {
+  margin-top: 1.5rem;
+}
+
+.voluntario-boton a {
+  text-decoration: none;
+}
+
+.voluntario-boton button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voluntario-boton button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+  .voluntario-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .voluntario-info p {
+    font-size: 0.95rem;
+  }
+
+  .voluntario-boton button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+.estado.pendiente {
+  color: orange;
+  font-weight: bold;
+}
+
+.estado.confirmado {
+  color: green;
+  font-weight: bold;
+}

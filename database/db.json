@@ -1,0 +1,129 @@
+{
+  "users": [
+    {
+      "id": "admin1",
+      "username": "adminWOG",
+      "password": "U2FsdGVkX1/NmNgQunqOPSsHuaNBaZfYQY8zrVomlf0=",
+      "nombre": "Super Admin",
+      "rol": "admin",
+      "telefono": "3100000001"
+    },
+    {
+      "id": "abuelo1",
+      "username": "abuelitoJuan",
+      "password": "U2FsdGVkX18w0CdmLB3PTT0VUdSUJ6iG4Vr7GJcbm7c=",
+      "nombre": "Juan García",
+      "foto_perfil": "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
+      "cedula": "22334432",
+      "rol": "abuelo",
+      "telefono": "3100000002"
+    },
+    {
+      "id": "abuelo2",
+      "username": "abuelitaMaria",
+      "password": "U2FsdGVkX18w0CdmLB3PTT0VUdSUJ6iG4Vr7GJcbm7c=",
+      "nombre": "Maria James",
+      "foto_perfil": "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
+      "cedula": "3322123",
+      "rol": "abuelo",
+      "telefono": "3224432"
+    },
+    {
+      "id": "vol1",
+      "username": "voluntariaLuz",
+      "password": "U2FsdGVkX180GtUlr8wNMWpsltRrnyIdB2CGErb9DXA=",
+      "nombre": "Luz Marina",
+      "rol": "voluntario",
+      "telefono": "3100000003",
+      "cedula": "1054789632",
+      "ciudad": "Barranquilla",
+      "direccion": "Cra 45 #30-25",
+      "certificado_antecedentes": "antecedentes",
+      "foto_perfil": "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
+      "estado_validacion": "pendiente"
+    },
+    {
+      "id": "vol2",
+      "username": "voluntarioAndres",
+      "password": "U2FsdGVkX180GtUlr8wNMWpsltRrnyIdB2CGErb9DXA=",
+      "nombre": "Andres santoyo",
+      "rol": "voluntario",
+      "telefono": "3100000003",
+      "cedula": "1054789632",
+      "ciudad": "Barranquilla",
+      "direccion": "Cra 45 #30-25",
+      "certificado_antecedentes": "antecedentes",
+      "foto_perfil": "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740",
+      "estado_validacion": "aprobado"
+    },
+    {
+      "id": "d3b2",
+      "username": "jose29",
+      "password": "U2FsdGVkX1/96qBLVyWKTwJUXZ7KzJniTvW5z0Ld5cU=",
+      "nombre": "jose santoyo",
+      "cedula": "22334455",
+      "rol": "abuelo",
+      "telefono": "3322345332"
+    }
+  ],
+  "dates": [
+    {
+      "id": "1",
+      "cedula": "22334322",
+      "nombreAbuelo": "Juan García",
+      "fecha": "2025-07-20",
+      "hora": "10:00",
+      "direccion": "Cra. 50 #40-12, Barranquilla",
+      "motivo": "Acompañamiento al médico",
+      "estado": "confirmado"
+    },
+    {
+      "id": "2",
+      "abueloId": "abuelo2",
+      "nombreAbuelo": "Doña Teresa Ríos",
+      "fecha": "2025-07-21",
+      "hora": "14:30",
+      "direccion": "Calle 72 #45-22, Barranquilla",
+      "motivo": "Ir al banco a cobrar pensión",
+      "estado": "confirmado",
+      "nombreVoluntario": "Voluntario desconocido",
+      "telefonoVoluntario": "Sin número"
+    },
+    {
+      "id": "d1a5",
+      "cedula": "22334455",
+      "nombreAbuelo": "jose santoyo",
+      "fecha": "2025-08-01",
+      "hora": "07:07",
+      "direccion": "calle 35b #17-97",
+      "motivo": "cita medica",
+      "estado": "confirmado",
+      "nombreVoluntario": "Andres santoyo",
+      "telefonoVoluntario": "3100000003"
+    },
+    {
+      "id": "8cce",
+      "cedula": "22334432",
+      "nombreAbuelo": "Juan García",
+      "fecha": "2025-07-30",
+      "hora": "11:25",
+      "direccion": "calle 35b #17-97",
+      "motivo": "cita medica",
+      "estado": "confirmado",
+      "nombreVoluntario": "Andres santoyo",
+      "telefonoVoluntario": "3100000003"
+    },
+    {
+      "id": "c679",
+      "cedula": "22334432",
+      "nombreAbuelo": "Juan García",
+      "fecha": "2025-07-30",
+      "hora": "12:36",
+      "direccion": "calle riwi",
+      "motivo": "necesito un espacio para hablar",
+      "estado": "confirmado",
+      "nombreVoluntario": "Andres santoyo",
+      "telefonoVoluntario": "3100000003"
+    }
+  ]
+}
