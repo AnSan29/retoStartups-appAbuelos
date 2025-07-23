@@ -536,7 +536,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Estilos generales para la vista del abuelo
+  Estilos generales para la vista del abuelo
    ========================================== */
 .abuelo-profile {
   padding: 2rem;
@@ -548,7 +548,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Tarjeta principal que contiene todo
+  Tarjeta principal que contiene todo
    ========================================== */
 .abuelo-card {
   background-color: #ffffff; /* Fondo blanco para contraste */
@@ -563,7 +563,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Imagen del perfil en forma de avatar redondo
+  Imagen del perfil en forma de avatar redondo
    ========================================== */
 .abuelo-avatar img {
   width: 150px;
@@ -575,7 +575,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Información del abuelo centrada
+  Información del abuelo centrada
    ========================================== */
 .abuelo-info {
   text-align: center;
@@ -598,7 +598,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Estilo para el botón inferior
+  Estilo para el botón inferior
    ========================================== */
 .abuelo-boton {
   margin-top: 2rem;
@@ -631,7 +631,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Responsividad para pantallas pequeñas
+  Responsividad para pantallas pequeñas
    ========================================== */
 @media (max-width: 480px) {
   .abuelo-card {
@@ -659,7 +659,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-   Responsividad para tablets medianas
+  Responsividad para tablets medianas
    ========================================== */
 @media (min-width: 481px) and (max-width: 768px) {
   .abuelo-card {
@@ -668,9 +668,9 @@ button[type="submit"]:hover {
 }
 
 /* ============================================================
-   Estilos para la vista "Crear Cita"
-   Archivo: create-date.css
-   Descripción: Estilos responsivos y accesibles para el formulario
+  Estilos para la vista "Crear Cita"
+  Archivo: create-date.css
+  Descripción: Estilos responsivos y accesibles para el formulario
    ============================================================ */
 
 /* Estilos generales del contenedor principal */
@@ -749,7 +749,7 @@ button[type="submit"]:hover {
 }
 
 /* =======================
-   Diseño Responsivo
+  Diseño Responsivo
    ======================= */
 
 /* Para tablets */
@@ -852,83 +852,94 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
+
+
 /* Estilos generales para la tarjeta del voluntario */
 .voluntario-profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
+  min-height: 100vh;
   box-sizing: border-box;
-  width: 100%;
+  background: linear-gradient(135deg, #e0eaff, #ffffff);
 }
 
 .voluntario-card {
-  background-color: #f2f2f2;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
   padding: 2rem;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s;
 }
 
-.voluntario-card:hover {
-  transform: scale(1.01);
+.voluntario-card h1 {
+  font-size: 2rem;
+  color: #1f3b73;
+  margin-bottom: 1rem;
 }
 
-/* Imagen del voluntario */
+.voluntario-card p {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
 .voluntario-avatar img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #A0C4FF;
   margin-bottom: 1rem;
 }
 
-/* Información */
 .voluntario-info h2 {
-  margin-bottom: 0.5rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #1f3b73;
+  margin: 0.5rem 0;
 }
 
 .voluntario-info p {
-  margin: 0.4rem 0;
+  margin: 0.3rem 0;
   font-size: 1rem;
   color: #555;
 }
 
 .voluntario-info strong {
-  color: #000;
+  color: #1f3b73;
 }
 
-/* Botón */
 .voluntario-boton {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .voluntario-boton a {
   text-decoration: none;
+  color: inherit;
 }
 
 .voluntario-boton button {
-  background-color: #4caf50;
-  color: white;
+  background-color: #A0C4FF;
+  color: #1f3b73;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.75rem;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .voluntario-boton button:hover {
-  background-color: #388e3c;
+  background-color: #7bb1ff;
 }
 
 /* Responsividad */
 @media (max-width: 480px) {
   .voluntario-card {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem;
   }
 
   .voluntario-info p {
@@ -940,6 +951,8 @@ button[type="submit"]:hover {
     padding: 0.6rem 1.2rem;
   }
 }
+
+
 
 .estado.pendiente {
   color: orange;
