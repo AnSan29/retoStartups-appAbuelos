@@ -1,1115 +1,1268 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-main {
-  flex-grow: 1;
-}
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
 
-/* ========== HEADER ========== */
-/* Estilos base del header */
-header {
-  position: sticky;
-  top: 0;
-  background-color: #6a5acd; /* Morado suave */
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+  /* ========== HEADER ========== */
+  /* Estilos base del header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #6a5acd; /* Morado suave */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-  flex-wrap: wrap;
-}
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    flex-wrap: wrap;
+  }
 
-/* Título */
-.title h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: white;
-}
+  /* Título */
+  .title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+  }
 
-/* Menú */
-.lista-nav {
-  flex-basis: 100%;
-  display: none;
-}
-
-.nav-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-items li {
-  text-align: center;
-  margin: 0.5rem 0;
-}
-
-.nav-items a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.5rem;
-  transition: background 0.3s ease;
-}
-
-.nav-items a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-/* Icono hamburguesa */
-.menu-icon {
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  display: block;
-}
-
-/* Ocultar checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Mostrar menú al marcar el checkbox */
-.menu-toggle:checked ~ .lista-nav {
-  display: block;
-}
-
-/* Responsive para pantallas grandes */
-@media screen and (min-width: 768px) {
-  .menu-icon {
+  /* Menú */
+  .lista-nav {
+    flex-basis: 100%;
     display: none;
   }
 
-  .lista-nav {
-    display: block !important;
-    flex-basis: auto;
-  }
-
   .nav-items {
-    flex-direction: row;
-    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-items li {
-    margin: 0;
+    text-align: center;
+    margin: 0.5rem 0;
   }
-}
 
-/* ESTILOS DE FOOTER */
-.footer {
-  background-color: #333333; /* gris elegante */
-  color: #A0C4FF;
-  padding: 2rem 1rem 1rem;
-  font-size: 1rem;
-}
+  .nav-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+  }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .nav-items a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
 
-.footer-section {
-  flex: 1 1 200px;
-}
+  /* Icono hamburguesa */
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    display: block;
+  }
 
-.footer-section h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 0.3rem;
-}
+  /* Ocultar checkbox */
+  .menu-toggle {
+    display: none;
+  }
 
-.footer-section p,
-.footer-section a,
-.footer-section li {
-  color: #ddd;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
+  /* Mostrar menú al marcar el checkbox */
+  .menu-toggle:checked ~ .lista-nav {
+    display: block;
+  }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
+  /* Responsive para pantallas grandes */
+  @media screen and (min-width: 768px) {
+    .menu-icon {
+      display: none;
+    }
 
-.footer-section a {
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
+    .lista-nav {
+      display: block !important;
+      flex-basis: auto;
+    }
 
-.footer-section a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
+    .nav-items {
+      flex-direction: row;
+      gap: 1rem;
+    }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #777;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  font-size: 0.95rem;
-}
+    .nav-items li {
+      margin: 0;
+    }
+  }
 
-/* Responsivo */
-@media (max-width: 768px) {
+  /* ESTILOS DE FOOTER */
+  .footer {
+    background-color: #333333; /* gris elegante */
+    color: #A0C4FF;
+    padding: 2rem 1rem 1rem;
+    font-size: 1rem;
+  }
+
   .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .footer-section {
-    width: 100%;
+    flex: 1 1 200px;
   }
 
   .footer-section h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.3rem;
   }
 
   .footer-section p,
+  .footer-section a,
+  .footer-section li {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
   .footer-section a {
-    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
   }
-}
 
-/* ESTILOS DE HOME */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-}
+  .footer-section a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 
-/* Sección Intro */
-.intro {
-  background: #f5f5f5;
-  text-align: center;
-  padding: 4rem 2rem;
-}
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #777;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.95rem;
+  }
 
-.intro h1 {
-  font-size: 3rem;
-  color: #6a1b9a;
-}
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-.intro p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #444;
-}
+    .footer-section {
+      width: 100%;
+    }
 
-/* Sección Abuelitos */
-.abuelitos {
-  background-color: #e8eaf6;
-  padding: 4rem 2rem;
-}
+    .footer-section h3 {
+      font-size: 1.2rem;
+    }
 
-.abuelitos h2 {
-  font-size: 2.2rem;
-  color: #283593;
-}
+    .footer-section p,
+    .footer-section a {
+      font-size: 1rem;
+    }
+  }
 
-.abuelitos p,
-.abuelitos ul {
-  font-size: 1.1rem;
-  color: #333;
-}
+  /* ESTILOS DE HOME */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
 
-.abuelitos ul {
-  margin-top: 1rem;
-  list-style-type: disc;
-  padding-left: 2rem;
-}
+  /* Sección Intro */
+  .intro {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
 
-.abuelitos button {
-  margin-top: 2rem;
-  background-color: #283593;
-  color: white;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.abuelitos button a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Sección Voluntarios */
-.voluntarios {
-  background-color: #ede7f6;
-  padding: 4rem 2rem;
-}
-
-.voluntarios h2 {
-  font-size: 2.2rem;
-  color: #4a148c;
-}
-
-.voluntarios ul {
-  margin-top: 1rem;
-  list-style-type: disc;
-  padding-left: 2rem;
-  color: #444;
-}
-
-.voluntarios button {
-  margin-top: 2rem;
-  background-color: #4a148c;
-  color: white;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Sección Testimonios */
-.testimonios {
-  background-color: #f3f3f3;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.testimonios h2 {
-  font-size: 2rem;
-  color: #333;
-}
-
-.testimonios blockquote {
-  font-style: italic;
-  background: white;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border-left: 5px solid #6a1b9a;
-  max-width: 700px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonios span {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #666;
-}
-
-/* Botones al pasar el mouse */
-button:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-}
-/* Tablets (entre 768px y 1024px) */
-@media screen and (max-width: 1024px) {
   .intro h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #6a1b9a;
   }
 
-  .abuelitos h2,
-  .voluntarios h2 {
-    font-size: 1.8rem;
-  }
-
-  .abuelitos p,
-  .voluntarios ul,
   .intro p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #444;
   }
 
-  .testimonios blockquote {
-    padding: 1rem;
-  }
-}
-
-/* Celulares (hasta 767px) */
-@media screen and (max-width: 767px) {
-  .intro h1 {
-    font-size: 2rem;
+  /* Sección Abuelitos */
+  .abuelitos {
+    background-color: #e8eaf6;
+    padding: 4rem 2rem;
   }
 
-  .intro p,
+  .abuelitos h2 {
+    font-size: 2.2rem;
+    color: #283593;
+  }
+
   .abuelitos p,
+  .abuelitos ul {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .abuelitos ul {
+    margin-top: 1rem;
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+
+  .abuelitos button {
+    margin-top: 2rem;
+    background-color: #283593;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .abuelitos button a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Sección Voluntarios */
+  .voluntarios {
+    background-color: #ede7f6;
+    padding: 4rem 2rem;
+  }
+
+  .voluntarios h2 {
+    font-size: 2.2rem;
+    color: #4a148c;
+  }
+
   .voluntarios ul {
-    font-size: 0.95rem;
+    margin-top: 1rem;
+    list-style-type: disc;
+    padding-left: 2rem;
+    color: #444;
   }
 
-  .abuelitos h2,
-  .voluntarios h2,
-  .testimonios h2 {
-    font-size: 1.5rem;
+  .voluntarios button {
+    margin-top: 2rem;
+    background-color: #4a148c;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
-  .abuelitos,
-  .voluntarios,
-  .intro,
+  /* Sección Testimonios */
   .testimonios {
-    padding: 2rem 1rem;
+    background-color: #f3f3f3;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .testimonios h2 {
+    font-size: 2rem;
+    color: #333;
   }
 
   .testimonios blockquote {
-    font-size: 0.95rem;
-    padding: 1rem;
-  }
-
-  button {
-    width: 100%;
-    padding: 0.7rem;
-    font-size: 1rem;
-  }
-}
-
-/* === ESTILOS GENERALES PARA LA VISTA DE LOGIN === */
-
-/* Contenedor principal de la vista de login */
-.login-view {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #f0f4f8; /* Fondo claro y suave */
-  padding: 2rem;
-}
-
-/* Caja que contiene el formulario */
-.login-container {
-  background-color: #ffffff;
-  padding: 4rem 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center; /* ¡NUEVO! Centra todo el contenido dentro del contenedor */
-}
-
-/* Título del login */
-.login-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
-  color: #333;
-}
-
-/* Campos de texto */
-.login-input {
-  width: 100%;
-  padding: 0.8rem 1rem; /* <-- Agrega padding horizontal */
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.1rem; /* Asegura alineación vertical adecuada */
-  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
-}
-
-/* Botón de iniciar sesión */
-.login-button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #4b0082; /* Morado oscuro */
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  /* text-align: center; Esta línea es redundante ya que el botón ocupa el 100% y el texto ya se centra visualmente */
-}
-
-.login-button:hover {
-  background-color: #3c0861;
-}
-
-/* Texto debajo del botón */
-.login-register-text {
-  margin-top: 1rem;
-  font-size: 1rem;
-  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
-  color: #555;
-}
-
-/* Enlace de registro */
-.login-register-link {
-  color: #4b0082;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-register-link:hover {
-  text-decoration: underline;
-}.login-button:hover {
-  background-color: #3c0861;
-}
-
-/* Texto debajo del botón */
-.login-register-text {
-  margin-top: 1rem;
-  font-size: 1rem;
-  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
-  color: #555;
-}
-
-/* Enlace de registro */
-.login-register-link {
-  color: #4b0082;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.login-register-link:hover {
-  text-decoration: underline;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-  .login-container {
+    font-style: italic;
+    background: white;
+    margin: 2rem auto;
     padding: 1.5rem;
+    border-left: 5px solid #6a1b9a;
+    max-width: 700px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
+  .testimonios span {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #666;
+  }
+
+  /* Botones al pasar el mouse */
+  button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  /* Tablets (entre 768px y 1024px) */
+  @media screen and (max-width: 1024px) {
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+
+    .abuelitos h2,
+    .voluntarios h2 {
+      font-size: 1.8rem;
+    }
+
+    .abuelitos p,
+    .voluntarios ul,
+    .intro p {
+      font-size: 1rem;
+    }
+
+    .testimonios blockquote {
+      padding: 1rem;
+    }
+  }
+
+  /* Celulares (hasta 767px) */
+  @media screen and (max-width: 767px) {
+    .intro h1 {
+      font-size: 2rem;
+    }
+
+    .intro p,
+    .abuelitos p,
+    .voluntarios ul {
+      font-size: 0.95rem;
+    }
+
+    .abuelitos h2,
+    .voluntarios h2,
+    .testimonios h2 {
+      font-size: 1.5rem;
+    }
+
+    .abuelitos,
+    .voluntarios,
+    .intro,
+    .testimonios {
+      padding: 2rem 1rem;
+    }
+
+    .testimonios blockquote {
+      font-size: 0.95rem;
+      padding: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+  }
+
+  /* === ESTILOS GENERALES PARA LA VISTA DE LOGIN === */
+
+  /* Contenedor principal de la vista de login */
+  .login-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f4f8; /* Fondo claro y suave */
+    padding: 2rem;
+  }
+
+  /* Caja que contiene el formulario */
+  .login-container {
+    background-color: #ffffff;
+    padding: 4rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center; /* ¡NUEVO! Centra todo el contenido dentro del contenedor */
+  }
+
+  /* Título del login */
   .login-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
+    color: #333;
   }
 
-  .login-input,
+  /* Campos de texto */
+  .login-input {
+    width: 100%;
+    padding: 0.8rem 1rem; /* <-- Agrega padding horizontal */
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1rem; /* Asegura alineación vertical adecuada */
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+  }
+
+  /* Botón de iniciar sesión */
   .login-button {
-    font-size: 1rem;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #4b0082; /* Morado oscuro */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* text-align: center; Esta línea es redundante ya que el botón ocupa el 100% y el texto ya se centra visualmente */
   }
-}
 
-/* abuelito register */
-.form-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 2rem;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  .login-button:hover {
+    background-color: #3c0861;
+  }
 
-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
+  /* Texto debajo del botón */
+  .login-register-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
+    color: #555;
+  }
 
-form input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
+  /* Enlace de registro */
+  .login-register-link {
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-form input:focus {
-  border-color: #0077cc;
-  outline: none;
-}
+  .login-register-link:hover {
+    text-decoration: underline;
+  }.login-button:hover {
+    background-color: #3c0861;
+  }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  background-color: #28a745;
-  border: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+  /* Texto debajo del botón */
+  .login-register-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
+    color: #555;
+  }
 
-button[type="submit"]:hover {
-  background-color: #218838;
-}
+  /* Enlace de registro */
+  .login-register-link {
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-.volver-link {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  color: #007bff;
-  text-decoration: none;
-}
+  .login-register-link:hover {
+    text-decoration: underline;
+  }
 
-.volver-link:hover {
-  text-decoration: underline;
-}
+  /* Responsivo */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 1.5rem;
+    }
 
-@media (max-width: 600px) {
+    .login-title {
+      font-size: 1.5rem;
+    }
+
+    .login-input,
+    .login-button {
+      font-size: 1rem;
+    }
+  }
+
+  /* abuelito register */
   .form-container {
-    margin: 20px;
-    padding: 1rem;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   form h2 {
-    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
   }
 
-  form input,
+  form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  form input:focus {
+    border-color: #0077cc;
+    outline: none;
+  }
+
   button[type="submit"] {
-    font-size: 0.95rem;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
   }
-}
 
-/* ==========================================
-  Estilos generales para la vista del abuelo
-   ========================================== */
-.abuelo-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background: linear-gradient(135deg, #e0eaff, #ffffff);
-}
+  button[type="submit"]:hover {
+    background-color: #218838;
+  }
 
-/* ==========================================
-  Tarjeta principal
-   ========================================== */
-.abuelo-card {
-  background-color: #ffffff;
-  padding: 2rem;
-  max-width: 700px;
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+  .volver-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
 
-.abuelo-card h1 {
-  font-size: 2rem;
-  color: #004080;
-  margin-bottom: 1rem;
-}
+  .volver-link:hover {
+    text-decoration: underline;
+  }
 
-.abuelo-card p {
-  color: #4a4a4a;
-  margin-bottom: 1rem;
-}
+  @media (max-width: 600px) {
+    .form-container {
+      margin: 20px;
+      padding: 1rem;
+    }
 
-/* ==========================================
-  Avatar redondo
-   ========================================== */
-.abuelo-avatar img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #A0C4FF;
-  margin-bottom: 1rem;
-}
+    form h2 {
+      font-size: 1.4rem;
+    }
 
-/* ==========================================
-  Información del abuelo
-   ========================================== */
-.abuelo-info {
-  text-align: center;
-  color: #333333;
-}
+    form input,
+    button[type="submit"] {
+      font-size: 0.95rem;
+    }
+  }
 
-.abuelo-nombre {
-  font-size: 1.8rem;
-  color: #004080;
-  margin-bottom: 1rem;
-}
+  /* ==========================================
+    Estilos generales para la vista del abuelo
+    ========================================== */
+  .abuelo-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #e0eaff, #ffffff);
+  }
 
-.abuelo-info p {
-  margin: 0.3rem 0;
-  font-size: 1rem;
-}
-
-.abuelo-info strong {
-  color: #555555;
-}
-
-/* ==========================================
-  Botón para crear cita
-   ========================================== */
-.abuelo-boton {
-  margin-top: 2rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.abuelo-boton button {
-  background-color: #A0C4FF;
-  color: #1f3b73;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.abuelo-boton button:hover {
-  background-color: #7bb1ff;
-}
-
-.abuelo-boton a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-/* ==========================================
-  Responsividad móvil
-   ========================================== */
-@media (max-width: 480px) {
+  /* ==========================================
+    Tarjeta principal
+    ========================================== */
   .abuelo-card {
-    padding: 1.5rem;
-    max-width: 90%;
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
+  .abuelo-card h1 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 1rem;
+  }
+
+  .abuelo-card p {
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+  }
+
+  /* ==========================================
+    Avatar redondo
+    ========================================== */
   .abuelo-avatar img {
     width: 120px;
     height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #A0C4FF;
+    margin-bottom: 1rem;
+  }
+
+  /* ==========================================
+    Información del abuelo
+    ========================================== */
+  .abuelo-info {
+    text-align: center;
+    color: #333333;
   }
 
   .abuelo-nombre {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #004080;
+    margin-bottom: 1rem;
   }
 
   .abuelo-info p {
-    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+
+  .abuelo-info strong {
+    color: #555555;
+  }
+
+  /* ==========================================
+    Botón para crear cita
+    ========================================== */
+  .abuelo-boton {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .abuelo-boton button {
-    width: 100%;
+    background-color: #A0C4FF;
+    color: #1f3b73;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.75rem;
     font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-}
 
-/* ==========================================
-  Responsividad para tablets
-   ========================================== */
-@media (min-width: 481px) and (max-width: 768px) {
-  .abuelo-card {
-    max-width: 80%;
+  .abuelo-boton button:hover {
+    background-color: #7bb1ff;
   }
-}
+
+  .abuelo-boton a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  /* ==========================================
+    Responsividad móvil
+    ========================================== */
+  @media (max-width: 480px) {
+    .abuelo-card {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+
+    .abuelo-avatar img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .abuelo-nombre {
+      font-size: 1.5rem;
+    }
+
+    .abuelo-info p {
+      font-size: 0.95rem;
+    }
+
+    .abuelo-boton button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  /* ==========================================
+    Responsividad para tablets
+    ========================================== */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .abuelo-card {
+      max-width: 80%;
+    }
+  }
 
 
-/* ============================================================
-  Estilos para la vista "Crear Cita"
-  Archivo: create-date.css
-  Descripción: Estilos responsivos y accesibles para el formulario
-   ============================================================ */
+  /* ============================================================
+    Estilos para la vista "Crear Cita"
+    Archivo: create-date.css
+    Descripción: Estilos responsivos y accesibles para el formulario
+    ============================================================ */
 
-/* Estilos generales del contenedor principal */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Tarjeta visual con sombra y bordes redondeados */
-.card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-/* Encabezado de la tarjeta con fondo azul */
-.card-header {
-  background-color: #0d6efd; /* Bootstrap Primary */
-  color: white;
-  padding: 1rem;
-}
-
-/* Cuerpo del formulario */
-.card-body {
-  padding: 1.5rem;
-}
-
-/* Estilos para cada campo del formulario */
-form .mb-3 {
-  margin-bottom: 1.5rem;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* Inputs y textarea uniformes */
-input[type="text"],
-input[type="date"],
-input[type="time"],
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border 0.3s ease;
-}
-
-/* Enfocar campos */
-input:focus,
-textarea:focus {
-  border-color: #0d6efd;
-  outline: none;
-}
-
-/* Botón de enviar */
-button[type="submit"] {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: #198754; /* Bootstrap success */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #157347;
-}
-
-/* =======================
-  Diseño Responsivo
-   ======================= */
-
-/* Para tablets */
-@media (max-width: 768px) {
+  /* Estilos generales del contenedor principal */
   .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Tarjeta visual con sombra y bordes redondeados */
+  .card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  /* Encabezado de la tarjeta con fondo azul */
+  .card-header {
+    background-color: #0d6efd; /* Bootstrap Primary */
+    color: white;
     padding: 1rem;
   }
 
+  /* Cuerpo del formulario */
   .card-body {
-    padding: 1rem;
+    padding: 1.5rem;
   }
-}
 
-/* Para móviles */
-@media (max-width: 480px) {
-  .card-header h2 {
+  /* Estilos para cada campo del formulario */
+  form .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  /* Inputs y textarea uniformes */
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+
+  /* Enfocar campos */
+  input:focus,
+  textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+
+  /* Botón de enviar */
+  button[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #198754; /* Bootstrap success */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #157347;
+  }
+
+  /* =======================
+    Diseño Responsivo
+    ======================= */
+
+  /* Para tablets */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+  }
+
+  /* Para móviles */
+  @media (max-width: 480px) {
+    .card-header h2 {
+      font-size: 1.2rem;
+    }
+
+    input,
+    textarea,
+    button {
+      font-size: 0.95rem;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  /* styles/dates.css */
+  .dates-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .dates-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .dates-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .date-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 6px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .date-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .date-card h2 {
+    margin-top: 0;
     font-size: 1.2rem;
+    color: #333;
   }
 
-  input,
-  textarea,
-  button {
+  .date-card p {
+    margin: 0.4rem 0;
     font-size: 0.95rem;
   }
 
-  button[type="submit"] {
-    width: 100%;
+  .estado {
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    text-transform: capitalize;
   }
-}
 
-/* styles/dates.css */
-.dates-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
+  /* Colores por estado */
+  .estado.pendiente {
+    background-color: #fff3cd;
+    color: #856404;
+  }
 
-.dates-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
+  .estado.confirmada {
+    background-color: #d4edda;
+    color: #155724;
+  }
 
-.dates-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
+  .estado.cancelada {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
 
-.date-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-left: 6px solid #5a5a5a;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.date-card:hover {
-  transform: translateY(-5px);
-}
-
-.date-card h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.date-card p {
-  margin: 0.4rem 0;
-  font-size: 0.95rem;
-}
-
-.estado {
-  font-weight: bold;
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
-  text-transform: capitalize;
-}
-
-/* Colores por estado */
-.estado.pendiente {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.estado.confirmada {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.estado.cancelada {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-.error {
-  color: red;
-  text-align: center;
-}
+  .error {
+    color: red;
+    text-align: center;
+  }
 
 
 
-/* Estilos generales para la tarjeta del voluntario */
-.voluntario-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background: linear-gradient(135deg, #e0eaff, #ffffff);
-}
+  /* Estilos generales para la tarjeta del voluntario */
+  .voluntario-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #e0eaff, #ffffff);
+  }
 
-.voluntario-card {
-  background-color: #ffffff;
-  padding: 2rem;
-  max-width: 700px;
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.voluntario-card h1 {
-  font-size: 2rem;
-  color: #1f3b73;
-  margin-bottom: 1rem;
-}
-
-.voluntario-card p {
-  color: #4a4a4a;
-  margin-bottom: 1rem;
-}
-
-.voluntario-avatar img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #A0C4FF;
-  margin-bottom: 1rem;
-}
-
-.voluntario-info h2 {
-  font-size: 1.5rem;
-  color: #1f3b73;
-  margin: 0.5rem 0;
-}
-
-.voluntario-info p {
-  margin: 0.3rem 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-.voluntario-info strong {
-  color: #1f3b73;
-}
-
-.voluntario-boton {
-  margin-top: 2rem;
-}
-
-.voluntario-boton a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.voluntario-boton button {
-  background-color: #A0C4FF;
-  color: #1f3b73;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.voluntario-boton button:hover {
-  background-color: #7bb1ff;
-}
-
-/* Responsividad */
-@media (max-width: 480px) {
   .voluntario-card {
-    padding: 1.2rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .voluntario-card h1 {
+    font-size: 2rem;
+    color: #1f3b73;
+    margin-bottom: 1rem;
+  }
+
+  .voluntario-card p {
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+  }
+
+  .voluntario-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #A0C4FF;
+    margin-bottom: 1rem;
+  }
+
+  .voluntario-info h2 {
+    font-size: 1.5rem;
+    color: #1f3b73;
+    margin: 0.5rem 0;
   }
 
   .voluntario-info p {
-    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .voluntario-info strong {
+    color: #1f3b73;
+  }
+
+  .voluntario-boton {
+    margin-top: 2rem;
+  }
+
+  .voluntario-boton a {
+    text-decoration: none;
+    color: inherit;
   }
 
   .voluntario-boton button {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
-  }
-}
-
-
-
-.estado.pendiente {
-  color: orange;
-  font-weight: bold;
-}
-
-.estado.confirmado {
-  color: green;
-  font-weight: bold;
-}
-/* Estilos formularios */
-
-
-/* ====== FORMULARIO PERFIL ====== */
-#perfilForm {
-  background-color: #A0C4FF;
-  padding: 25px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  width: 100%;
-}
-
-#perfilForm input,
-#perfilForm textarea {
-  background-color: #FFFFFF;
-  border: 2px solid #D0F4DE;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-}
-
-#perfilForm button {
-  background-color: #FFAFCC;
-  color: #333;
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#perfilForm button:hover {
-  background-color: #FDFFB6;
-}
-
-/* ====== FORMULARIO REGISTRO ====== */
-#registroForm {
-  background-color: #A0C4FF;
-  padding: 25px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  width: 100%;
-}
-
-#registroForm input,
-#registroForm select {
-  background-color: #FFFFFF;
-  border: 2px solid #D0F4DE;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-}
-
-#registroForm button {
-  background-color: #FFAFCC;
-  color: #333;
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#registroForm button:hover {
-  background-color: #FDFFB6;
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 480px) {
-  #loginForm,
-  #perfilForm,
-  #registroForm {
-    padding: 20px;
-    max-width: 95%;
+    background-color: #A0C4FF;
+    color: #1f3b73;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
-  #loginForm input,
+  .voluntario-boton button:hover {
+    background-color: #7bb1ff;
+  }
+
+  /* Responsividad */
+  @media (max-width: 480px) {
+    .voluntario-card {
+      padding: 1.2rem;
+    }
+
+    .voluntario-info p {
+      font-size: 0.95rem;
+    }
+
+    .voluntario-boton button {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
+
+
+  .estado.pendiente {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .estado.confirmado {
+    color: green;
+    font-weight: bold;
+  }
+  /* Estilos formularios */
+
+
+  /* ====== FORMULARIO PERFIL ====== */
+  #perfilForm {
+    background-color: #A0C4FF;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+  }
+
   #perfilForm input,
-  #perfilForm textarea,
+  #perfilForm textarea {
+    background-color: #FFFFFF;
+    border: 2px solid #D0F4DE;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  #perfilForm button {
+    background-color: #FFAFCC;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #perfilForm button:hover {
+    background-color: #FDFFB6;
+  }
+
+  /* ====== FORMULARIO REGISTRO ====== */
+  #registroForm {
+    background-color: #A0C4FF;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+  }
+
   #registroForm input,
   #registroForm select {
-    font-size: 14px;
-    padding: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #D0F4DE;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
   }
 
-  #loginForm button,
-  #perfilForm button,
   #registroForm button {
-    font-size: 14px;
-    padding: 10px;
+    background-color: #FFAFCC;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #registroForm button:hover {
+    background-color: #FDFFB6;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 480px) {
+    #loginForm,
+    #perfilForm,
+    #registroForm {
+      padding: 20px;
+      max-width: 95%;
+    }
+
+    #loginForm input,
+    #perfilForm input,
+    #perfilForm textarea,
+    #registroForm input,
+    #registroForm select {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    #loginForm button,
+    #perfilForm button,
+    #registroForm button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  /* Fin Estilos formularios */
+
+
+/* ==========================
+   ESTILOS PARA LA VISTA DE ABOUT
+=========================== */
+
+/* Contenedor principal de la vista About */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem; /* Más espaciado para hacer el diseño más espacioso */
+  background-color: #f8f8f8;
+  flex-wrap: wrap;
+}
+
+/* Contenido de About (texto y formulario) */
+.about-content {
+  width: 50%;
+  padding-right: 2rem;
+  color: #333;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 2rem;
+}
+
+/* --- ESTILOS MEJORADOS DEL FORMULARIO --- */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Añade espacio entre los elementos del formulario */
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 1rem; /* Espacio entre los campos de nombre y apellido */
+  flex-wrap: wrap; /* Permite que los campos se envuelvan en pantallas pequeñas */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  /* margin: 0.5rem 0;  Eliminamos el margen individual para usar 'gap' en el contenedor */
+  border: 1px solid #dcdcdc; /* Borde más suave */
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%; /* Asegura que tomen el ancho completo disponible */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  transition: border-color 0.3s ease-in-out; /* Suave transición al enfocar */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; /* Elimina el contorno por defecto */
+  border-color: #4b0082; /* Borde de color al enfocar */
+  box-shadow: 0 0 5px rgba(75, 0, 130, 0.2); /* Sutil sombra al enfocar */
+}
+
+.contact-form .form-row input {
+  flex: 1; /* Permite que cada input en la fila ocupe el espacio disponible equitativamente */
+  min-width: 150px; /* Asegura que no se hagan demasiado pequeños */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Permite redimensionar solo verticalmente */
+  min-height: 120px; /* Altura mínima para el área de texto */
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Añadimos transform para un efecto al presionar */
+  width: 100%;
+  font-weight: bold; /* Hacer el texto del botón más fuerte */
+}
+
+.contact-form button:hover {
+  background-color: #3c0861;
+}
+
+.contact-form button:active {
+  transform: translateY(1px); /* Efecto de "presionado" */
+}
+
+/* Imagen del equipo */
+.about-image {
+  width: 40%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .about-content {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form .form-row {
+    flex-direction: column; /* Apila los inputs en una sola columna en móviles */
+    gap: 0; /* Elimina el espacio horizontal cuando están apilados */
+  }
+
+  .contact-form input {
+    margin-bottom: 1rem; /* Añade margen inferior entre los inputs apilados */
   }
 }
-/* Fin Estilos formularios */
