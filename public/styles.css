@@ -15,7 +15,7 @@
   header {
     position: sticky;
     top: 0;
-    background-color: #6a5acd; /* Morado suave */
+    background-color: #A0C4FF; /* Morado suave */
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
@@ -32,7 +32,8 @@
   .title h1 {
     margin: 0;
     font-size: 1.8rem;
-    color: white;
+    color: #333333;
+    font-style:italic;
   }
 
   /* Menú */
@@ -56,7 +57,7 @@
 
   .nav-items a {
     text-decoration: none;
-    color: white;
+    color: #333333;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0.5rem;
