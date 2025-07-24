@@ -1,7 +1,9 @@
 export default function AbueloProfile() {
   return `
-   <section class="abuelo-profile">
+  <section class="abuelo-profile">
   <div class="abuelo-card">
+    <h1>Bienvenido</h1>
+    <p><strong>Este es tu espacio donde podrás ver el estado de tus solicitudes, formularios, encuentas y lo más importante, tu perfil.</strong></p>
     <div class="abuelo-avatar">
       <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740" alt="Foto de perfil del abuelo">
     </div>

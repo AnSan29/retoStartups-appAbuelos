@@ -108,8 +108,8 @@ header {
 
 /* ESTILOS DE FOOTER */
 .footer {
-  background-color: #4b0082; /* morado oscuro elegante */
-  color: #fff;
+  background-color: #333333; /* gris elegante */
+  color: #A0C4FF;
   padding: 2rem 1rem 1rem;
   font-size: 1rem;
 }
@@ -411,7 +411,7 @@ button:hover {
 /* Botón de iniciar sesión */
 .login-button {
   width: 100%;
-  padding: 0.9rem;
+  padding: 0.8rem;
   background-color: #4b0082; /* Verde oscuro */
   color: white;
   border: none;
@@ -422,7 +422,7 @@ button:hover {
 }
 
 .login-button:hover {
-  background-color: #1b5e20;
+  background-color: #3c0861;
 }
 
 /* Texto debajo del botón */
@@ -539,52 +539,62 @@ button[type="submit"]:hover {
   Estilos generales para la vista del abuelo
    ========================================== */
 .abuelo-profile {
-  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2; /* Fondo suave */
-  min-height: 100vh; /* Vista completa en altura */
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #e0eaff, #ffffff);
 }
 
 /* ==========================================
-  Tarjeta principal que contiene todo
+  Tarjeta principal
    ========================================== */
 .abuelo-card {
-  background-color: #ffffff; /* Fondo blanco para contraste */
-  border-radius: 12px; /* Bordes redondeados para suavidad */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 700px;
   width: 100%;
-  max-width: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.abuelo-card h1 {
+  font-size: 2rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.abuelo-card p {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
 }
 
 /* ==========================================
-  Imagen del perfil en forma de avatar redondo
+  Avatar redondo
    ========================================== */
 .abuelo-avatar img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* Círculo perfecto */
-  object-fit: cover; /* Evita distorsión */
-  border: 4px solid #d9e4f5; /* Borde azul claro decorativo */
-  margin-bottom: 1.5rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #A0C4FF;
+  margin-bottom: 1rem;
 }
 
 /* ==========================================
-  Información del abuelo centrada
+  Información del abuelo
    ========================================== */
 .abuelo-info {
   text-align: center;
-  color: #333333; /* Color oscuro para buen contraste */
+  color: #333333;
 }
 
 .abuelo-nombre {
   font-size: 1.8rem;
-  color: #004080; /* Azul oscuro institucional */
+  color: #004080;
   margin-bottom: 1rem;
 }
 
@@ -594,11 +604,11 @@ button[type="submit"]:hover {
 }
 
 .abuelo-info strong {
-  color: #555555; /* Gris medio para diferenciar etiquetas */
+  color: #555555;
 }
 
 /* ==========================================
-  Estilo para el botón inferior
+  Botón para crear cita (coherente con voluntario)
    ========================================== */
 .abuelo-boton {
   margin-top: 2rem;
@@ -608,20 +618,22 @@ button[type="submit"]:hover {
 }
 
 .abuelo-boton button {
-  background-color: #004080; /* Azul institucional */
-  color: #ffffff;
+  background-color: #A0C4FF;
+  color: #1f3b73;
   border: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .abuelo-boton button:hover {
-  background-color: #003060; /* Más oscuro al pasar el mouse */
+  background-color: #7bb1ff;
 }
-.boton-enlace {
+
+.abuelo-boton a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
@@ -631,7 +643,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-  Responsividad para pantallas pequeñas
+  Responsividad móvil
    ========================================== */
 @media (max-width: 480px) {
   .abuelo-card {
@@ -659,13 +671,14 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-  Responsividad para tablets medianas
+  Responsividad para tablets
    ========================================== */
 @media (min-width: 481px) and (max-width: 768px) {
   .abuelo-card {
     max-width: 80%;
   }
 }
+
 
 /* ============================================================
   Estilos para la vista "Crear Cita"
