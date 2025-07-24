@@ -246,6 +246,11 @@ header {
   cursor: pointer;
 }
 
+.abuelitos button a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Sección Voluntarios */
 .voluntarios {
   background-color: #ede7f6;
