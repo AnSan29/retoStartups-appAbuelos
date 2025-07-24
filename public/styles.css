@@ -412,7 +412,7 @@ button:hover {
 .login-button {
   width: 100%;
   padding: 0.8rem;
-  background-color: #4b0082; /* Verde oscuro */
+  background-color: #4b0082; /* Morado oscuro */
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -608,7 +608,7 @@ button[type="submit"]:hover {
 }
 
 /* ==========================================
-  Botón para crear cita (coherente con voluntario)
+  Botón para crear cita
    ========================================== */
 .abuelo-boton {
   margin-top: 2rem;
