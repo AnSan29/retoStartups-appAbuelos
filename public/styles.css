@@ -976,78 +976,141 @@ button[type="submit"]:hover {
   color: green;
   font-weight: bold;
 }
-/* ======== Formularios ======== */
-#loginForm, #perfilForm, #registroForm {
-  background-color: #A0C4FF;
+/* Estilos formularios */
+
+/* ====== FORMULARIO LOGIN ====== */
+#loginForm {
+  background-color: #A0C4FF; /* Azul pastel */
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
   max-width: 400px;
+  width: 100%;
 }
 
-/* Inputs y selects */
-#loginForm input,
-#perfilForm input,
-#registroForm input,
-#registroForm select,
-#perfilForm textarea {
-  padding: 12px;
-  border: none;
+#loginForm input {
+  background-color: #FFFFFF; /* Blanco */
+  border: 2px solid #D0F4DE; /* Verde menta */
   border-radius: 8px;
+  padding: 12px;
   font-size: 16px;
-  background-color: #FFFFFF;
 }
 
-#perfilForm textarea {
-  resize: none;
-  min-height: 80px;
-}
-
-/* Botones */
-#loginForm button,
-#perfilForm button,
-#registroForm button {
+#loginForm button {
   background-color: #FFAFCC; /* Rosa */
   color: #333;
   border: none;
-  padding: 12px;
   border-radius: 8px;
+  padding: 12px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
-#loginForm button:hover,
-#perfilForm button:hover,
-#registroForm button:hover {
+#loginForm button:hover {
   background-color: #FDFFB6; /* Amarillo pastel */
 }
 
-/* Select */
-#registroForm select {
+/* ====== FORMULARIO PERFIL ====== */
+#perfilForm {
+  background-color: #A0C4FF;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+#perfilForm input,
+#perfilForm textarea {
   background-color: #FFFFFF;
+  border: 2px solid #D0F4DE;
+  border-radius: 8px;
+  padding: 12px;
   font-size: 16px;
 }
 
-/* ======== Responsive ======== */
+#perfilForm button {
+  background-color: #FFAFCC;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#perfilForm button:hover {
+  background-color: #FDFFB6;
+}
+
+/* ====== FORMULARIO REGISTRO ====== */
+#registroForm {
+  background-color: #A0C4FF;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+#registroForm input,
+#registroForm select {
+  background-color: #FFFFFF;
+  border: 2px solid #D0F4DE;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+#registroForm button {
+  background-color: #FFAFCC;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#registroForm button:hover {
+  background-color: #FDFFB6;
+}
+
+/* ====== RESPONSIVE ====== */
 @media (max-width: 480px) {
-  #loginForm, #perfilForm, #registroForm {
+  #loginForm,
+  #perfilForm,
+  #registroForm {
     padding: 20px;
     max-width: 95%;
   }
 
-  h2 {
-    font-size: 20px;
+  #loginForm input,
+  #perfilForm input,
+  #perfilForm textarea,
+  #registroForm input,
+  #registroForm select {
+    font-size: 14px;
+    padding: 10px;
   }
 
-  input, button, select, textarea {
+  #loginForm button,
+  #perfilForm button,
+  #registroForm button {
     font-size: 14px;
     padding: 10px;
   }
 }
-/* ======== Fin Formularios ======== */
+/* Fin Estilos formularios */
