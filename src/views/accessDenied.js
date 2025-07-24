@@ -1,3 +1,6 @@
 export default function AccessDenied() {
-  return `<h1>Acceso denegado</h1>`;
+  return `
+    <div class="acceso-denegado">
+      <h1>Acceso Denegado</h1>
+    </div>`;
 }
