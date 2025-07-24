@@ -510,36 +510,36 @@
     color: #333;
   }
 
-  form input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
+form input {
+  width: 100%;
+  padding: 12px;  
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
 
   form input:focus {
     border-color: #0077cc;
     outline: none;
   }
 
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4b0082;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
 
-  button[type="submit"]:hover {
-    background-color: #218838;
-  }
+.form-container button[type="submit"]:hover {
+  background-color: #39085c;
+}
 
   .volver-link {
     display: block;
