@@ -510,9 +510,9 @@
     color: #333;
   }
 
-form input {
+.form-container input {
   width: 100%;
-  padding: 12px;  
+  padding: .8rem .05rem;  
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -759,18 +759,17 @@ form input {
     color: #333;
   }
 
-  /* Inputs y textarea uniformes */
-  input[type="text"],
-  input[type="date"],
-  input[type="time"],
-  textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border 0.3s ease;
-  }
+/* Inputs y textarea uniformes */
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
 
   /* Enfocar campos */
   input:focus,
