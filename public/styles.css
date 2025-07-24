@@ -531,8 +531,7 @@
 
 .form-container input {
   width: 100%;
-  padding: .8rem .05rem;
-  text-align: center;
+  padding: 12px;  
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -545,6 +544,7 @@
   }
 
 .form-container button[type="submit"] {
+.form-container button[type="submit"] {
   width: 100%;
   padding: 12px;
   background-color: #4b0082;
@@ -555,8 +555,11 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
+.form-container button[type="submit"]:hover {
+  background-color: #39085c;
 .form-container button[type="submit"]:hover {
   background-color: #39085c;
 }
