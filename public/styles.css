@@ -388,29 +388,36 @@ button:hover {
 /* Caja que contiene el formulario */
 .login-container {
   background-color: #ffffff;
-  padding: 2rem 2.5rem;
+  padding: 4rem 2.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  text-align: center; /* ¡NUEVO! Centra todo el contenido dentro del contenedor */
 }
 
 /* Título del login */
 .login-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
   color: #333;
 }
 
 /* Campos de texto */
 .login-input {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.8rem 1rem; /* <-- Agrega padding horizontal */
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   font-size: 1.1rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.1rem; /* Asegura alineación vertical adecuada */
+  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
 }
 
 /* Botón de iniciar sesión */
@@ -424,6 +431,7 @@ button:hover {
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  /* text-align: center; Esta línea es redundante ya que el botón ocupa el 100% y el texto ya se centra visualmente */
 }
 
 .login-button:hover {
@@ -434,7 +442,28 @@ button:hover {
 .login-register-text {
   margin-top: 1rem;
   font-size: 1rem;
-  text-align: center;
+  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
+  color: #555;
+}
+
+/* Enlace de registro */
+.login-register-link {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-register-link:hover {
+  text-decoration: underline;
+}.login-button:hover {
+  background-color: #3c0861;
+}
+
+/* Texto debajo del botón */
+.login-register-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  /* text-align: center;  Esta línea ahora es redundante gracias a text-align en .login-container */
   color: #555;
 }
 
@@ -983,41 +1012,6 @@ button[type="submit"]:hover {
 }
 /* Estilos formularios */
 
-/* ====== FORMULARIO LOGIN ====== */
-#loginForm {
-  background-color: #A0C4FF; /* Azul pastel */
-  padding: 25px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  width: 100%;
-}
-
-#loginForm input {
-  background-color: #FFFFFF; /* Blanco */
-  border: 2px solid #D0F4DE; /* Verde menta */
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-}
-
-#loginForm button {
-  background-color: #FFAFCC; /* Rosa */
-  color: #333;
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#loginForm button:hover {
-  background-color: #FDFFB6; /* Amarillo pastel */
-}
 
 /* ====== FORMULARIO PERFIL ====== */
 #perfilForm {
